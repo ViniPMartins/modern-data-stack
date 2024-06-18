@@ -13,20 +13,6 @@ services:
     volumes:
       - ./data/postgres:/var/lib/postgresql/data
 
-  dcs-pgadmin:
-    image: dpage/pgadmin4:latest
-    container_name: dcs-pgadmin
-    restart: always
-    depends_on:
-      - dcs-postgres
-    environment:
-      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
-      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
-    ports:
-      - "8080:80"
-    volumes:
-      - ./data/pgadmin:/var/lib/pgadmin
-
 networks:
   default:
     driver: bridge
