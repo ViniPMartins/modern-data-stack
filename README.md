@@ -30,3 +30,13 @@ Caso ainda não tenha a pasta do Airbyte, é necessário clonar o repositório
 # clonar o Airbyte do github caso ainda n
 git clone --depth=1 https://github.com/airbytehq/airbyte.git
 ```
+
+Iniciar o Airflow com o seguinte comando
+```bash
+astro dev start
+```
+
+Se precisar instalar o Astro Cli, ver [essa documentação](https://www.astronomer.io/docs/astro/cli/install-cli)
+
+Caso tenha conflito de postas, olhar [essa documentação](https://www.astronomer.io/docs/astro/cli/troubleshoot-locally#ports-are-not-available-for-my-local-airflow-webserver)
+
