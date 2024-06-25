@@ -43,3 +43,15 @@ Se precisar instalar o Astro Cli, ver [essa documentação](https://www.astronom
 
 Caso tenha conflito de postas, olhar [essa documentação](https://www.astronomer.io/docs/astro/cli/troubleshoot-locally#ports-are-not-available-for-my-local-airflow-webserver)
 
+
+Para configurar o DBT, verique se está instalado. Se não, usar:
+```bash
+pip install dbt-postgres
+```
+
+Para iniciar um projeto e testar, rodar os seuintes comandos:
+```bash
+dbt init
+dbt debug
+```
+Para definir a pasta onde será salvo e lido pelo dbt o arquivo profiles.yml, a variável de ambiente `DBT_PROFILES_DIR` deve estar iniciada no ambiente.
