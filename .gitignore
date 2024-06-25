@@ -1,5 +1,6 @@
 .env
 data/
+venv/
 
 .gradle
 .idea
@@ -53,9 +54,6 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 cover/
-
-# dbt
-profiles.yml
 
 # Terraform
 .terraform/

@@ -4,9 +4,12 @@ Construção de um Modern data stack para processamento  e análise de dados
 ## Variáveis de ambiente
 Definir as seguinte variáveis de ambiente
 ```
+POSTGRES_HOST=host
+POSTGRES_PORT=port
 POSTGRES_PASSWORD=password
-POSTGRES_USER=postgres
-POSTGRES_DB=postgres
+POSTGRES_USER=user
+POSTGRES_DB=database
+DBT_PROFILES_DIR=/path/to/profile
 ```
 
 ## Primeiros passos
