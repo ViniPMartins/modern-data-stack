@@ -18,6 +18,7 @@ Na raiz principal do projeto, subir o container com o postgres com o comando
 ```bash
 docker compose up
 ```
+
 Em seguida, subir o Airbyte com os seguintes comandos
 
 ```bash
