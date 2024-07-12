@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: postgres
+    config:
+      enabled: true
+    database: postgres
+    schema: bronze
+    tables:
+      - name: mv_movies
+        description: Relação de todos os filmes na base de dados com ID, nome e genero
+        columns:
+          - name: title
+            description: Titulo do filme
+          - name: genres
+            description: Gêneros do filme
+          - name: movieId
+            description: Identificador único
+      - name: rt_ratings
+        description: Notas dadas ao filmes pelos usuários
+        columns:
+          - name: rating
+            description: Nota dada ao filme
+          - name: userId
+            description: Identificador único do usuário
+          - name: movieId
+            description: Identificador único do filme
+          - name: timestamp
+            description: Momento em que foi dada a nota ao filme
