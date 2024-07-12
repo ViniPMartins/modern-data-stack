@@ -1,5 +1,19 @@
 version: "3.9"
 services:
+  postgres:
+    image: postgres:15.3-alpine
+    container_name: postgres
+    hostname: postgres
+    volumes:
+      - ./database/postgres:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_DB: metabase
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    networks:
+      - metanet1
   metabase:
     image: metabase/metabase:latest
     container_name: metabase
@@ -15,28 +29,16 @@ services:
       MB_DB_USER: ${POSTGRES_USER}
       MB_DB_PASS: ${POSTGRES_PASSWORD}
       MB_DB_HOST: postgres
+    depends_on: 
+      - postgres
     networks:
       - metanet1
+
     # healthcheck:
     #   test: curl --fail -I http://localhost:3000/api/health || exit 1
     #   interval: 15s
     #   timeout: 5s
     #   retries: 5
-
-  postgres:
-    image: postgres:15.3-alpine
-    container_name: postgres
-    hostname: postgres
-    volumes:
-      - ./database/postgres:/var/lib/postgresql/data
-    ports:
-      - 5432:5432
-    environment:
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_DB: metabase
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-    networks:
-      - metanet1
 
 networks:
   metanet1:

@@ -12,6 +12,11 @@ POSTGRES_DB=database
 DBT_PROFILES_DIR=/path/to/profile
 ```
 
+Para carregar as variáveis de ambiente:
+```bash
+export $(grep -v '^#' .env | xargs)
+```
+
 ## Primeiros passos
 Na raiz principal do projeto, subir o container com o postgres com o comando
 
