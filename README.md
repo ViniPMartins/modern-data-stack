@@ -52,7 +52,7 @@ Caso tenha conflito de postas, olhar [essa documentação](https://www.astronome
 
 Para configurar o DBT, verique se está instalado. Se não, usar:
 ```bash
-pip install dbt-postgres
+pip install dbt-core dbt-postgres
 ```
 
 Para iniciar um projeto e testar, rodar os seuintes comandos:

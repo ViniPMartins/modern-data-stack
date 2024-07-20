@@ -7,7 +7,7 @@ sources:
     database: postgres
     schema: bronze
     tables:
-      - name: mv_movies
+      - name: rawmovies
         description: Relação de todos os filmes na base de dados com ID, nome e genero
         columns:
           - name: title
@@ -16,7 +16,7 @@ sources:
             description: Gêneros do filme
           - name: movieId
             description: Identificador único
-      - name: rt_ratings
+      - name: rawratings
         description: Notas dadas ao filmes pelos usuários
         columns:
           - name: rating
