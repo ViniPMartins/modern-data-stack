@@ -4,7 +4,6 @@ services:
   metabase:
       image: metabase/metabase:v0.46.6.4
       container_name: metabase
-      hostname: metabase
       volumes:
         - ./include/metabase-data:/metabase-data
       ports:
@@ -12,3 +11,9 @@ services:
       environment:
         - MB_DB_FILE=/metabase-data/metabase.db
       restart: always
+      networks:
+        - airflow_cad268_airflow
+
+networks:
+  airflow_cad268_airflow:
+    external: True
