@@ -13,7 +13,9 @@ services:
       restart: always
       networks:
         - airflow_cad268_airflow
-
+      depends_on:
+        - airflow_cad268-postgres-1
+        
 networks:
   airflow_cad268_airflow:
     external: True
