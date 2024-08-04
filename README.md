@@ -1,5 +1,7 @@
 # Projeto Modern Data Stack
 
+![arquitetura](imgs/image-1.png)
+
 Este projeto é uma solução completa para ingestão, processamento e visualização de dados utilizando diversas ferramentas como Airbyte, Airflow, DBT, Metabase e Superset. A arquitetura foi desenhada para permitir flexibilidade e escalabilidade no tratamento de grandes volumes de dados.
 
 ## Sumário
