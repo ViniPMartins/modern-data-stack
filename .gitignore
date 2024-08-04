@@ -2,6 +2,9 @@
 data/
 database/
 venv/
+metabase-data/
+airbyte/
+superset/
 
 .gradle
 .idea
