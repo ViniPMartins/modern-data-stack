@@ -5,7 +5,7 @@ from airflow.providers.airbyte.sensors.airbyte import AirbyteJobSensor
 from airflow.sensors.filesystem import FileSensor
 import pendulum
 
-AIRBYTE_CONNECTION_ID = '777a6e82-def1-436d-afba-1c7d042ec51f'
+AIRBYTE_CONNECTION_ID = '61269e2a-f087-44c9-951f-d5adbc1b3fac'
 
 with DAG(dag_id='airbyte_airflow_dag',
         default_args={'owner': 'airflow'},
