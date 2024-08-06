@@ -32,3 +32,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   dbt_project:
       materialized: table
+      ouro:
+        +schema: "gold"  # Define o schema "gold" para as tabelas report_
+        materialized: table

@@ -15,7 +15,7 @@ DBT_CONFIG = ProfileConfig(
     target_name="dev",
     profile_mapping=PostgresUserPasswordProfileMapping(
         conn_id="airflow_db",
-        profile_args={"schema": "staging"},
+        profile_args={"schema": "prata"},
     ),
 )
 

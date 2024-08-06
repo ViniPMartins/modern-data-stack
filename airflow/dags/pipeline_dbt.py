@@ -13,20 +13,33 @@ from airflow.models.baseoperator import chain
     start_date=datetime(2024, 7, 7),
     schedule=None,
     catchup=False,
-    tags=['staging'],
+    tags=['airflow'],
 )
-def pipeline_movies():
+def pipeline_dbt():
     pre_dbt = EmptyOperator(task_id="pre_dbt")
 
-    transform = DbtTaskGroup(
-        group_id='pipeline_staging',
+    transform_prata = DbtTaskGroup(
+        group_id='camada_prata',
         project_config=ProjectConfig(DBT_PROJECT_PATH),
         profile_config=DBT_CONFIG,
         execution_config=venv_execution_config,
+        render_config=RenderConfig(
+            select=['path:models/prata']
+        )
+    )
+
+    transform_ouro = DbtTaskGroup(
+        group_id='camada_ouro',
+        project_config=ProjectConfig(DBT_PROJECT_PATH),
+        profile_config=DBT_CONFIG,
+        execution_config=venv_execution_config,
+        render_config=RenderConfig(
+            select=['path:models/ouro']
+        )
     )
 
     post_dbt = EmptyOperator(task_id="post_dbt")
 
-    pre_dbt >> transform >> post_dbt
+    pre_dbt >> transform_prata >> transform_ouro >> post_dbt
 
-pipeline_movies()
+pipeline_dbt()
