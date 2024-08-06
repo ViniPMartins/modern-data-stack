@@ -4,6 +4,8 @@
 
 Este projeto é uma solução completa para ingestão, processamento e visualização de dados utilizando diversas ferramentas como Airbyte, Airflow, DBT, Metabase e Superset. A arquitetura foi desenhada para permitir flexibilidade e escalabilidade no tratamento de grandes volumes de dados.
 
+O desevolvimento teve como base as aulas da Jornada de Dados e lives do Luciano Galvão Filho [https://www.youtube.com/@JornadaDeDados](https://www.youtube.com/@JornadaDeDados)
+
 ## Sumário
 
 - [Visão Geral](#visão-geral)
