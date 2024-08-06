@@ -1,10 +1,5 @@
-{{ config(
-    schema='ouro',
-    materialized='view'
-) }}
-
 with ouro as (
-    SELECT * from {{ ref('prt_faturamento') }}
+    SELECT * from {{ ref ('prt_faturamento') }}
 ),
 transform as (
     select 
