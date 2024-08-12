@@ -30,6 +30,13 @@ Antes de começar, certifique-se de ter as seguintes ferramentas instaladas:
 - Make
 - Python 3.8+
 
+## Esquemas de Portas
+
+- 8000: Airbyte
+- 8081: Airflow
+- 3000: Metabase
+- 8088: Superset
+
 ## Instalação
 
 Clone este repositório e entre no diretório do projeto:
