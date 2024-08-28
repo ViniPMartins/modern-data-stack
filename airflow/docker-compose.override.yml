@@ -18,4 +18,5 @@ services:
         
 networks:
   airflow_cad268_airflow:
+    driver: bridge
     external: True
