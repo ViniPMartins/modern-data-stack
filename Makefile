@@ -1,7 +1,7 @@
 all: airbyte airflow connect-networks superset
 
 airbyte:
-	if [ ! -d "superset" ]; then git clone --depth=1 https://github.com/airbytehq/airbyte.git; fi
+	if [ ! -d "airbyte" ]; then git clone --depth=1 https://github.com/airbytehq/airbyte.git; fi
 	./airbyte/run-ab-platform.sh -b
 
 airflow: init-astro connect-networks
