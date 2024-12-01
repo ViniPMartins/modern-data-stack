@@ -8,10 +8,13 @@ from cosmos.config import ProjectConfig, RenderConfig
 
 from airflow.operators.empty import EmptyOperator
 from airflow.models.baseoperator import chain
+from airflow.datasets import Dataset
+
+airbyte_sync_dataset = Dataset("airbyte_sync_dataset")
 
 @dag(
     start_date=datetime(2024, 7, 7),
-    schedule=None,
+    schedule=[airbyte_sync_dataset],
     catchup=False,
     tags=['airflow'],
 )
