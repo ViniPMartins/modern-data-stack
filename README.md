@@ -79,6 +79,7 @@ Em seguida, seguir as seguintes instruções para configuração:
         - Host: airbyte-proxy
         - login: airbyte
         - password: password
+        - port: 8000
 
     Esse são os logins padrão do airbyte. caso altera essas informações de login (ver documentação citada mais abaixo), colocar as mesmas credenciais nesta conexão.
 
